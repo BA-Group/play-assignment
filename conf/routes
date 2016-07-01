@@ -1,0 +1,5 @@
+POST    /contacts                   controllers.ContactController.create
+PUT     /contacts/:id               controllers.ContactController.update(id:String)
+GET     /contacts                   controllers.ContactController.list
+GET     /contacts/:id               controllers.ContactController.get(id:String)
+DELETE  /contacts/:id               controllers.ContactController.remove(id:String)
