@@ -1,20 +1,16 @@
-# Example application using play 2.5 and reactive mongo
+# Play & ReactiveMongo, assignment
 
-# Configure MongoDB
+Objective is to implement a really simple CRUD for a contact database, using Play Framework and MongoDb with ReactiveMongo. A template controller (`controllers.ContactController`) is provided. You should implement the function stubs so that the application is able to create, update, read, list and delete contacts.
+ 
+You will need Java JDK 8 installed. The provided activator script should know how to fetch all the rest.
 
-Just change it in application.conf
+Help and documentation can be found at:
+* https://www.playframework.com/documentation/2.5.x/Home
+* http://reactivemongo.org/releases/0.11/documentation/tutorial/play2.html
+* https://docs.mongodb.com/manual/
 
-```
-mongodb.uri = "mongodb://localhost/contacts"
-```
-
-# Run it
-
-```
-sbt run
-```
-
-# Data model
+ 
+## Data model
 
 The database consists of contact records. A contact has the following form:
 
@@ -29,6 +25,22 @@ The database consists of contact records. A contact has the following form:
 }
 ```
 
+Data model should be validated on the input, so that no invalid data ends up in the database. Invalid input should return HTTP status `BAD REQUEST`. You can use the "Coast-to-coast"-json approach or create domain objects for validation. 
+
+# Configure MongoDB
+
+Just change it in conf/application.conf
+
+```
+mongodb.uri = "mongodb://localhost/contacts"
+```
+
+# Run it
+
+```
+./activator run
+```
+
 # Contacts
 
 Template for Contacts controller is provided. Implement the function stubs so that the application provides the following REST-services
@@ -36,7 +48,7 @@ Template for Contacts controller is provided. Implement the function stubs so th
 ## Add some contacts
 
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.org}' http://localhost:9000/contacts/
+curl -H "Content-Type: application/json" -X POST -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.org}' http://localhost:9000/contacts
 ```
 
 ## List contacts
@@ -71,6 +83,8 @@ curl -X DELETE http://localhost:9000/contacts/<contactId>
 
 
 ## Test invalid formats
+
+The input doesn't contain all the required fields, so it should return a status `BAD REQUEST`.
 
 ```
 curl -H "Content-Type: application/json" -X POST -d '[{"firstName": "pepe"}]' http://localhost:9000/contacts
