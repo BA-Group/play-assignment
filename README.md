@@ -2,7 +2,7 @@
 
 Objective is to implement a really simple CRUD for a contact database, using Play Framework and MongoDb with ReactiveMongo. A template controller (`controllers.ContactController`) is provided. You should implement the function stubs so that the application is able to create, update, read, list and delete contacts.
  
-You will need Java JDK 8 and MongoDB installed. Start the sbt-console by running the activator-script found in the project root. From the console run the project with command `run` and head to address http://localhost:9000/ with your browser. 
+You will need Java JDK 8 and MongoDB installed. Start the sbt-console by running the activator-script found in the project root. From the console run the project with command `run` and head to address [http://localhost:9000](http://localhost:9000/) with your browser. 
 
 Help and documentation can be found at:
 * https://www.playframework.com/documentation/2.5.x/Home
@@ -25,7 +25,7 @@ The database consists of contact records. A contact has the following form:
 }
 ```
 
-Data model should be validated on the input, so that no invalid data ends up in the database. Invalid input should return HTTP status `BAD REQUEST`. You can use the "Coast-to-coast"-json approach or create domain objects for validation. 
+Data model should be validated on the input, so that no invalid data ends up in the database. Invalid input should return HTTP status `BAD REQUEST`. You can use the ["Coast-to-coast"](https://www.playframework.com/documentation/2.5.x/ScalaJsonTransformers)-json approach or create [domain objects](https://www.playframework.com/documentation/2.5.x/ScalaJsonAutomated) for validation. 
 
 # Configure MongoDB
 
