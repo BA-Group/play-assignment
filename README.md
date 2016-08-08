@@ -43,7 +43,12 @@ mongodb.uri = "mongodb://localhost/contacts"
 
 # Contacts
 
-Template for Contacts controller is provided. Implement the function stubs so that the application provides the following REST-services
+Template for Contacts controller is provided. Implement the function stubs so that the 
+application provides the following REST-services. Also a helper function (`collection()`) 
+to get a reference to the contacts collection in MongoDb is provided. Remember, all the 
+operations on MongoDb are asynchronous. As an example, the `get()`-function is already 
+implemented. Remember that MongoDb uses `ObjectId`-instances as id's by default, so
+you should generate the id as string yourself before you insert the object to the database.
 
 ## Add some contacts
 
