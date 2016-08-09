@@ -1,14 +1,19 @@
 # Play & ReactiveMongo, assignment
 
-Objective is to implement a really simple CRUD for a contact database, using Play Framework and MongoDb with ReactiveMongo. A template controller (`controllers.ContactController`) is provided. You should implement the function stubs so that the application is able to create, update, read, list and delete contacts.
+Objective is to implement a really simple CRUD for a contact database, using Play Framework and MongoDb with ReactiveMongo. A template controller (`controllers.ContactController`) is provided. You should implement the function stubs so that the application is able to create, update, read, list and delete contacts. Don't hesitate to ask for an advice if you're seem to be stuck with some problem. The aim is not only to assess your codings skills, but also your problem solving and collaboration skills. And if you don't get everything done in a reasonable amount of time, return what you've made anyways, so we can estimate your effort.
  
 You will need Java JDK 8 and MongoDB installed. Start the sbt-console by running the activator-script found in the project root. From the console run the project with command `run` and head to address [http://localhost:9000](http://localhost:9000/) with your browser. 
 
 Help and documentation can be found at:
-* https://www.playframework.com/documentation/2.5.x/Home
-* http://reactivemongo.org/releases/0.11/documentation/tutorial/play2.html
-* https://docs.mongodb.com/manual/
+* Scala
+  * http://docs.scala-lang.org/tutorials/
+* Play
+  * https://www.playframework.com/documentation/2.5.x/Home
+* MongoDb
+  * http://reactivemongo.org/releases/0.11/documentation/tutorial/play2.html
+  * https://docs.mongodb.com/manual/
 
+Good IDE's for Scala programming are [IntelliJ IDEA](https://www.jetbrains.com/idea/) and Eclipse's [Scala-IDE](http://scala-ide.org/).
  
 ## Data model
 
