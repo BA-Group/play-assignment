@@ -9,7 +9,8 @@ scalaVersion := "2.11.7"
 routesGenerator := InjectedRoutesGenerator
 
 libraryDependencies ++= Seq(
-  "org.reactivemongo" %% "play2-reactivemongo" % "0.11.12"
+  "org.reactivemongo" %% "play2-reactivemongo" % "0.11.14",
+  "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "1.50.2"
 )
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
