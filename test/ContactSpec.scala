@@ -40,7 +40,7 @@ class ContactSpec extends PlaySpecification{
     "return 200 with correct contact when finding with ID" in {
       val Some(res) = route(app, FakeRequest(GET, s"/contacts/$id"))
       status(res) must_== OK
-      contentAsJson(res) must_== contactJs ++ obj("_id" -> id)
+      contentAsJson(res) must_== contactJs ++ obj("id" -> id)
     }
 
     "return 200 list that contains created contact" in {
