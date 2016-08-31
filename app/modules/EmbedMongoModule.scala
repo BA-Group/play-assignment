@@ -18,7 +18,7 @@ class EmbedMongo @Inject()(lifecycle: ApplicationLifecycle, @Named("mongoPort") 
     .version(de.flapdoodle.embed.mongo.distribution.Version.Main.PRODUCTION)
     .net(new Net(port, Network.localhostIsIPv6))
     .build)
-
+  
   mongod.start()
 
   lifecycle.addStopHook{ () =>
